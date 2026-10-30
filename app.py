@@ -7,7 +7,8 @@ model = joblib.load("model.pkl")
 
 @app.route("/")
 def home():
-    return jsonify({"message": "App is running!!"})
+    # return jsonify({"message": "App is running!!"})
+    return jsonify({"message": "New Version Deployed!!"})
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -22,3 +23,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001)
+
